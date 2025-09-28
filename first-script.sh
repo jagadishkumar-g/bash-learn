@@ -1,3 +1,5 @@
 #!/bin/bash
 
-echo "My first script, but not the last one"
+name="Jagadish"
+age="26"
+echo "My name is $name. My age is $age."

@@ -10,7 +10,7 @@ pwd
 
 # cd "$HOME_DIR" || exit
 
-if [ -d "$DIR_EXIST" ]; then
+if [ -d "$DIR_NAME" ]; then
     echo "Folder already exists."
 else
     if mkdir "$DIR_NAME"; then

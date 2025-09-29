@@ -6,6 +6,7 @@ HOME_DIR="/home/ubuntu"
 read -r -p "Enter the directory name which you want to create: " DIR_NAME
 
 cd "$HOME_DIR" || { echo "Home directory not found"; exit 1; }
+pwd
 
 # cd "$HOME_DIR" || exit
 

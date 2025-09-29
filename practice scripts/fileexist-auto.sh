@@ -1,13 +1,13 @@
 #!/bin/bash
 
-# HOME_DIR="$HOME"
+HOME_DIR="$HOME"
 
 read -r -p "Enter file names separated by space: " FILES
 cd "$HOME_DIR" || { echo "Home directory not found."; exit 1; }
 
 for file in $FILES;
 do
-    if [ -f "$file" ]; then
+    if [ -f "$HOME_DIR/$file" ]; then
         echo "$file File already exist"
     else
         touch "$file";

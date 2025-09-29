@@ -13,6 +13,11 @@ pwd
 if [ -d "$DIR_EXIST" ]; then
     echo "Folder already exists."
 else
-    mkdir "$DIR_NAME"
-    echo "Folder '$DIR_NAME' has been created."
+    if mkdir "$DIR_NAME"; then
+        mkdir "DIR_NAME"
+        echo "Directory has been created successfully."
+    else
+        echo "Folder '$DIR_NAME' has been created."
+        exit 1
+    fi
 fi

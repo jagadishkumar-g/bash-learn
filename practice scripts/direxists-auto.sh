@@ -14,7 +14,6 @@ if [ -d "$DIR_EXIST" ]; then
     echo "Folder already exists."
 else
     if mkdir "$DIR_NAME"; then
-        mkdir "DIR_NAME"
         echo "Directory has been created successfully."
     else
         echo "Folder '$DIR_NAME' has been created."

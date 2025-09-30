@@ -5,12 +5,12 @@ read -r -a RESOURCES -p "Enter multiple name by space: "
 for sources in "${RESOURCES[@]}"; do
     if [ -f "$HOME/$sources" ]; then
         echo "FILE name: $sources" 
-        echo "File size: $(stat -c %s "$sources")"
+        echo "File size: $(stat -c %s "$HOME/$sources")"
         echo "Resource Type: FILE"
         ((FILEFOUND++))
     elif [ -d "$HOME/$sources" ]; then
         echo "Directory name: $sources" 
-        echo "Directory size: $(stat -c %s "$sources")"
+        echo "Directory size: $(stat -c %s "$HOME/$sources")"
         echo "Resource Type: FILE"
         ((DIRFOUND++))
     else

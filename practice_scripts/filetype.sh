@@ -8,12 +8,11 @@ for sources in "${RESOURCES[@]}"; do
         echo "File size: $(stat -c %s "$sources")"
         echo "Resource Type: FILE"
         ((FILEFOUND++))
-    if [ -d "$HOME/$sources" ]; then
+    elif [ -d "$HOME/$sources" ]; then
         echo "Directory name: $sources" 
         echo "Directory size: $(stat -c %s "$sources")"
         echo "Resource Type: FILE"
         ((DIRFOUND++))
-    fi
     else
         echo "$sources not found"
         ((NOTFOUND++))
@@ -25,5 +24,5 @@ echo ""
 echo "Summary: ${#RESOURCES[@]}"
 echo "Total files entered: $FILEFOUND"
 echo "Total files entered: $DIRFOUND"
-Existing: echo "$exist"
-Missing: echo "$NOTFOUND"
+echo "Existing: $exist"
+echo "Missing: $NOTFOUND"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -r -p -a "enter multiple files: " FILES
+read -r -a FILES -p "enter multiple files: "
 
 for file in "${FILES[@]}"; do
     echo "FILE: $file"

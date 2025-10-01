@@ -15,9 +15,9 @@ create_item() {
     if [ -e "$HOME/$NAME" ]; then
         echo "$NAME Already Exist"
     elif [ "$TYPE" = "file" ]; then
-        touch $NAME && echo "File '$NAME' created." | tee -a "$HOME"/creation.log
+        touch $HOME/$NAME && echo "File '$NAME' created." | tee -a "$HOME"/creation.log
     elif [ "$TYPE" = "folder" ]; then
-        mkdir $NAME && echo "Folder '$NAME' created." | tee -a "$HOME"/creation.log
+        mkdir $HOME/$NAME && echo "Folder '$NAME' created." | tee -a "$HOME"/creation.log
     else
         echo "Invaild File Type, Please enter correct "File Type""
         exit 1

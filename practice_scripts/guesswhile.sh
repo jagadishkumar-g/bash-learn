@@ -12,7 +12,7 @@ attempts=0
 while true; do
     read -r -p "Guess a number between 1 and 9: " GUESS
     ((attempts++))
-    if [ "$GUESS" = $secret ]; then
+    if [ "$GUESS" -ne $secret ]; then
         echo "You secret number is $secret"
     fi
 done

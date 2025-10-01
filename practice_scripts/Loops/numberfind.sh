@@ -24,7 +24,8 @@ for attempts in {1..5}; do
         echo "Too Low!"
         echo "Attempts left: $((5-attempts))" 
     else 
-        echo "/nCongratulations! Secret number is: $secret"
+        echo ""
+        echo "Congratulations! Secret number is: $secret"
         exit 0
     fi    
 done

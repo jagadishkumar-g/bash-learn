@@ -6,7 +6,6 @@
 # Print how many tries it took.
 
 secret=8
-GUESS=0
 attempts=0
 
 while true; do
@@ -14,8 +13,9 @@ while true; do
     ((attempts++))
     if [ "$GUESS" -ne $secret ]; then
         echo "You secret number is $secret"
+        ((GUESS++))
     fi
 done
 
 echo "Total Attempts: $attempts"
-echo "Total Guess Taken: "
+echo "Total Guess Taken: $GUESS"

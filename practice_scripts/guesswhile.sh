@@ -13,6 +13,8 @@ while [ $guess -ne $secret ]; do
     ((attempts++))
     if [ $guess -ne $secret ]; then
         echo "You secret number is $secret"
+    else
+        echo "Please trying again."
     fi
 done
 

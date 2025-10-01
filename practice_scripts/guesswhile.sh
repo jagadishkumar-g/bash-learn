@@ -16,3 +16,6 @@ while true; do
         echo "You secret number is $secret"
     fi
 done
+
+echo "Total Attempts: $attempts"
+echo "Total Guess Taken: "

@@ -20,6 +20,7 @@ create_item() {
         touch $NAME && echo "Directory '$NAME' created." | tee -a "$HOME"/creation.log
     else
         echo "Invaild File Type, Please enter correct "File Type""
+        exit 1
     fi
 }
 

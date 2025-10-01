@@ -28,7 +28,7 @@ read -r -p "Enter names separated by space: " NAME
 read -r -p "Do you want to create files or folders? (file/folder): " TYPE 
 
 for item in $NAME; do
-    create_item $item $TYPE
+    create_item "$item" "$TYPE"
     ((counter++))
 done
 

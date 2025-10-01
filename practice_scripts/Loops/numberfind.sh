@@ -9,9 +9,10 @@
 
 secret=8
 
-read -r -p "ENTER your number (1-9): " guess
+
 
 for attempts in {1..5}; do
+    read -r -p "ENTER your number (1-9): " guess
     if [[ ! "$guess" =~ ^[0-9]+$ ]]; then
         echo "Enter the digit from 1-9"
     fi

@@ -25,9 +25,8 @@ for attempts in {1..5}; do
         echo "Attempts left: $((5-attempts))" 
     else 
         echo "Secret number is : $secret."
-    fi
-    
-    
+        exit 1
+    fi    
 done
 
 echo "Game Over! The secret number was $secret."

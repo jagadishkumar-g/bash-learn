@@ -17,14 +17,14 @@ for attempts in {1..5}; do
         echo "Enter the digit from 1-9"
     fi
 
-    if [ "$guess" -eq "$secret" ]; then
-        echo "Secret number is : $secret."
+    if [ "$guess" -gt "$secret" ]; then
+        echo "Too High"
+        echo "Attempts left: $((5-attempts))"
     elif [ "$guess" -lt "$secret" ]; then
         echo "Too Low!"
         echo "Attempts left: $((5-attempts))" 
     else 
-        echo "Too High"
-        echo "Attempts left: $((5-attempts))" 
+        echo "Secret number is : $secret."
     fi
     
     

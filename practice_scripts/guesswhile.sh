@@ -18,4 +18,4 @@ while [ $river -ne $secret ]; do
 done
 
 echo "Total Attempts: $attempts"
-echo "Total Guess Taken: $GUESS"
+echo "Total Guess Taken: $river"

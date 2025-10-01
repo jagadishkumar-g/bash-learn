@@ -21,11 +21,13 @@ for attempts in {1..5}; do
         echo "Secret number is : $secret."
     elif [ "$guess" -lt "$secret" ]; then
         echo "Too Low!"
+        echo "Attempts left: $((5-attempts))" 
     else 
         echo "Too High"
+        echo "Attempts left: $((5-attempts))" 
     fi
     
-    echo "Attempts left: $((5-attempts))" 
+    
 done
 
 echo "Game Over! The secret number was $secret."

@@ -15,9 +15,9 @@ create_item() {
     if [ -e "$HOME/$NAME" ]; then
         echo "$NAME Already Exist"
     elif [ "$TYPE" = "file" ]; then
-        touch $HOME/$NAME && echo "File '$NAME' created." | tee -a "$HOME"/creation.log
+        touch "$HOME"/"$NAME" && echo "File '$NAME' created." | tee -a "$HOME"/creation.log
     elif [ "$TYPE" = "folder" ]; then
-        mkdir $HOME/$NAME && echo "Folder '$NAME' created." | tee -a "$HOME"/creation.log
+        mkdir "$HOME"/"$NAME" && echo "Folder '$NAME' created." | tee -a "$HOME"/creation.log
     else
         echo "Invaild File Type, Please enter correct "File Type""
         exit 1
@@ -29,6 +29,8 @@ read -r -p "Do you want to create files or folders? (file/folder): " TYPE
 
 for item in $NAME; do
     create_item $item $TYPE
+    ((counter++))
 done
 
+echo "Total Items processed: $counter"
 echo "All done! Check creation.log for details."

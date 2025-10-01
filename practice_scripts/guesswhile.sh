@@ -6,14 +6,14 @@
 # Print how many tries it took.
 
 secret=8
+river=0
 attempts=0
 
 while true; do
-    read -r -p "Guess a number between 1 and 9: " GUESS
+    read -r -p "Guess a number between 1 and 9: " river
     ((attempts++))
-    if [ "$GUESS" -ne $secret ]; then
+    if [ $river -ne $secret ]; then
         echo "You secret number is $secret"
-        ((GUESS++))
     fi
 done
 

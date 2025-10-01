@@ -9,7 +9,7 @@ secret=8
 river=0
 attempts=0
 
-while true; do
+while [ $river -ne $secret ]; do
     read -r -p "Guess a number between 1 and 9: " river
     ((attempts++))
     if [ $river -ne $secret ]; then

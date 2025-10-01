@@ -1,4 +1,7 @@
 #!/bin/bash
+#Under this script we learned how to use read -a(arrays), for loop), checking files and dir, counters++, stat to get file data.
+#if, elif, else.
+# 
 
 read -r -a RESOURCES -p "Enter multiple name by space: "
 

@@ -50,7 +50,7 @@ validate_input() {
 
 # Loop for each name
 for NAME in $NAMES; do
-    validate_input "$NAME"
+    validate_input "$NAME" "$TYPE"
 done
 
 # Requesting for user input

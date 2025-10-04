@@ -1,7 +1,6 @@
 #!/bin/bash
 
-LOG_FILE="logfile.log"
-# shellcheck disable=SC2188
+LOG_FILE="$HOME/logfile.log"
 > "$LOG_FILE"
 
 # Create file function
@@ -9,10 +8,10 @@ create_file() {
     local FILE_NAME=$1
     
     if [ -e "$HOME/$FILE_NAME"  ]; then
-        echo -e "$FILE_NAME is already exist.\n"
+        echo "$FILE_NAME is already exist."
     else
         touch "$HOME/$FILE_NAME"
-        echo "created $NAME"
+        echo "created $FILE_NAME"
     fi
 
 }
@@ -23,10 +22,10 @@ create_folder() {
     local FOLDER_NAME=$1
     
     if [ -e "$HOME/$FOLDER_NAME"  ]; then
-        echo -e "$FOLDER_NAME is already exist.\n"
+        echo "$FOLDER_NAME is already exist."
     else
         mkdir "$HOME/$FOLDER_NAME"
-        echo "created $NAME"
+        echo "created $FOLDER_NAME"
     fi
 
 
@@ -49,12 +48,11 @@ validate_input() {
 
 }
 
+# Requesting for user input
+read -r -p "Enter names (space-separated): " NAMES
+read -r -p "Type to create (file/folder): " TYPE
+
 # Loop for each name
 for item in $NAMES; do
     validate_input "$item" "$TYPE"
 done
-
-# Requesting for user input
-
-read -r -p "Enter names (space-separated): " NAMES
-read -r -p "Type to create (file/folder): " TYPE

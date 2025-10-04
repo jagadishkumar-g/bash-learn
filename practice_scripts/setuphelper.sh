@@ -17,7 +17,7 @@ install_package() {
 validate_pakage() {
     local TOOL=$1
 
-    if Command -v "$TOOL" &>dev/null; then
+    if Command -v "$TOOL" &>/dev/null; then
         echo "$TOOL is installed" | tee -a "$LOG_FILE"
     else
         echo "$TOOL not found. Installing...." | tee -a "$LOG_FILE"

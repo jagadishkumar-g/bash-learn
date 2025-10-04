@@ -12,6 +12,7 @@ create_file() {
         echo -e "$FILE_NAME is already exist.\n"
     else
         touch "$HOME/$FILE_NAME"
+        echo "created $NAME"
     fi
 
 }
@@ -25,6 +26,7 @@ create_folder() {
         echo -e "$FOLDER_NAME is already exist.\n"
     else
         mkdir "$HOME/$FOLDER_NAME"
+        echo "created $NAME"
     fi
 
 

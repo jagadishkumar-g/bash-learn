@@ -42,7 +42,6 @@ validate_input() {
         create_folder "$NAME"
     else
         echo "Invaild file/folder type, please try again."
-        exit 1
     fi
 
 

@@ -49,8 +49,8 @@ validate_input() {
 }
 
 # Loop for each name
-for NAME in $NAMES; do
-    validate_input "$NAME" "$TYPE"
+for item in $NAMES; do
+    validate_input "$item" "$TYPE"
 done
 
 # Requesting for user input

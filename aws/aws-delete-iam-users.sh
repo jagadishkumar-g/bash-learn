@@ -1,7 +1,9 @@
 #!/bin/bash
 
+set -e
+
 # storing all username in the variable. 
-USERS_LIST=$(aws iam list-users --query 'Users[*].UserName' --output text)
+USERS_LIST=($(aws iam list-users --query 'Users[*].UserName' --output text))
 
 for user in "${USERS_LIST[@]}"; do
     if ! [[ "$user" = "admin-user" || "$user" = "ravi-sha" ]]; then

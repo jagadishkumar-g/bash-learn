@@ -1,6 +1,7 @@
 #!/bin/bash
 
 LOG_FILE="$HOME/logfile.log"
+# shellcheck disable=SC2188
 > "$LOG_FILE"
 
 # Create file function

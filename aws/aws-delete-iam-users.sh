@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+# set -e
 
 # storing all username in the variable. 
 USERS_LIST=($(aws iam list-users --query 'Users[*].UserName' --output text))
@@ -12,7 +12,7 @@ for user in "${USERS_LIST[@]}"; do
 
     POLICIES=$(aws iam list-attached-user-policies --user-name "$user" --query 'AttachedPolicies[*].PolicyArn' --output text) 
     for p in $POLICIES; do
-        aws iam detach-user-policy --user-name "$user" --policy-arn "$p"
+        aws iam detach-user-policy --user-name "$user" --policy-arn "$p"              
     done
 
     aws iam detach-user-policy --user-name "$user" --policy-arn arn:aws:iam::aws:policy/AdministratorAccess
